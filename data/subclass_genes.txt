@@ -1,0 +1,30 @@
+gene	subclass	fuction
+DDX3X	C1	other
+TP53	C1	Genome instability
+SV:CD274	C1	other
+DOCK4	C1	Genome instability
+KDM6B	C1	Epigenetic Modifiers
+STK11:AMP	C1	Tumor Suppressors
+STAT3	C2	JAK/STAT signalling
+PMS2:DEL	C2	Genome instability
+PRDM9	C2	Genome instability
+CRLF2:AMP	C2	JAK/STAT signalling
+CBL	C2	JAK/STAT signalling
+ALK	C2	other
+SV:CASP8	C3	tumor suppressors
+RELN	C3	Epigenetic Modifiers
+HDAC9	C3	Epigenetic Modifiers
+SV:MUC4	C3	other
+ARID1A	C3	Epigenetic Modifiers
+ARID1B	C3	Epigenetic Modifiers
+TET2	C3	Epigenetic Modifiers
+DST	C4	Genome instability
+FNDC1	C4	other
+RBMX:DEL	C4	Tumor Suppressors
+NOTCH1	C4	Tumor Suppressors
+SV:TIPIN	C4	Genome instability
+DAAM2	C4	other
+CUX1	C4	tumor suppresor
+EPOR:AMP	C4	Epigenetic Modifiers
+HUWE1	C4	Genome instability
+JAK3	C4	JAK/STAT signalling
