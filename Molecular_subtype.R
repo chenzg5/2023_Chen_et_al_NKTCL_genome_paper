@@ -7,7 +7,8 @@ subclass_genes <- read.table("subclass_genes.txt",header = T,sep = "\t")
 genes <- subclass_genes$gene
 subclass <- subclass_genes$subclass
 mat <- read.table('NKT_allgene_matrix.txt',sep = '\t',header = T,row.names = 1)
-###Complexheatmap绘图
+
+###Complexheatmap plot
 
 # set the colar of mutations
 col = c("Non_synonymous_mutations" = "#101820", "low_level_CN_gain" = "#f7beca", "CN_gain"="#df302e",
@@ -40,7 +41,7 @@ heatmap_legend_param = list(title = "Alternations",
 test <- oncoPrint(mat,
           alter_fun = alter_fun, 
           alter_fun_is_vectorized = FALSE,
-          pct_gp = gpar(fontsize = 6), # 百分比的字体大小
+          pct_gp = gpar(fontsize = 6), 
           col = col,
           column_title = column_title)
 test
@@ -62,16 +63,16 @@ order <- order_df$sample
 ha <- HeatmapAnnotation(sampling_status=cdata$sampling_status,
                         sequencing_method=cdata$sequencing_method,
                         stage=cdata$Ann_Arbor_stage,
-                        show_annotation_name = TRUE, # 展示标签
+                        show_annotation_name = TRUE, 
                         col = list(sampling_status = c("0" =  "#cab2d6", "1" = "#6a3d9a"),
                                    sequencing_method = c("WGS" =  "#FF9200FF", "WES" = "#FFDB00FF"),
                                    stage=c("I_II" = "#66BCD9", "III_IV" = "#CA8C8B","unknow"="#859297")),
-                        annotation_name_gp = gpar(fontsize = 10)) # 标签大小
+                        annotation_name_gp = gpar(fontsize = 10)) 
 
 top <- HeatmapAnnotation(cluster=cdata$cluster,
-                        show_annotation_name = TRUE, # 展示标签
+                        show_annotation_name = TRUE, 
                         col = list(cluster = c("C0" =  "#bdbdbd", "C1" = "#803d97","C2" = "#00a2d1","C3" = "#f19122","C4" = "#dd292a")),
-                        annotation_name_gp = gpar(fontsize = 10)) # 标签大小
+                        annotation_name_gp = gpar(fontsize = 10)) 
 
 
 oncoplot_anno <- oncoPrint(mat,
@@ -80,10 +81,10 @@ oncoplot_anno <- oncoPrint(mat,
                            col = col,
                            row_names_side = "left",
                            pct_side = "right",
-                           bottom_annotation = ha, #底部注释
+                           bottom_annotation = ha, 
                            top_annotation =top,
-                           left_annotation = rowAnnotation(bar=subclass), # 左边注释
-                           remove_empty_columns = F, #remove_empty_rows = TRUE, # 删除空的行和列
+                           left_annotation = rowAnnotation(bar=subclass), 
+                           remove_empty_columns = F, #remove_empty_rows = TRUE, 
                            column_title = column_title,
                            column_order = order,
                            #row_order = genes,
