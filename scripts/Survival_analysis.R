@@ -9,7 +9,7 @@ fit <- survfit(Surv(OS,dead) ~cluster,data=cdata)
 plot(fit)
 p2 <- ggsurvplot(fit, data = cdata,
                  surv.median.line = "hv",lwd=1.2, 
-                 palette=c("#bcbcbc","#803c96","#00a1d1","#f09121","#dd292a"),#"#bcbcbc","#803c96","#00a1d1","#f09121","#dd292a"
+                 palette=c("#bcbcbc","#803c96","#00a1d1","#f09121","#dd292a"),
                  legend.labs=c( "C0","C1","C2","C3","C4"), 
                  legend.title="Cluster",
                  ylab="Overall survival ",xlab = " Time (months)", 
@@ -34,10 +34,10 @@ fit <- survfit(Surv(PFS,relapsed) ~cluster,data=cdata)
 plot(fit)
 p2 <- ggsurvplot(fit, data = cdata,
                  surv.median.line = "hv",lwd=1.2, 
-                 palette=c("#bcbcbc","#803c96","#00a1d1","#f09121","#dd292a"),#"#bcbcbc","#803c96","#00a1d1","#f09121","#dd292a"
+                 palette=c("#bcbcbc","#803c96","#00a1d1","#f09121","#dd292a"),
                  legend.labs=c( "C0","C1","C2","C3","C4"), 
                  legend.title="Cluster",
-                 ylab="Overall survival ",xlab = " Time (months)", 
+                 ylab="Progression-free survival ",xlab = " Time (months)", 
                  censor.shape = 124,censor.size = 2,
                  break.x.by = 12,
                  font.legend=13,
